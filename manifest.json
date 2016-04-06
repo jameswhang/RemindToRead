@@ -12,10 +12,16 @@
         },
         "permissions": [
             "activeTab",
+            "identity",
             "https://ajax.googleapis.com/",
-             "https://apis.google.com/*"
-        ],
-        "content_security_policy":"script-src 'self' https://apis.google.com 'unsafe-eval'; object-src 'self'"
-
+            "https://apis.google.com/*"
+                ],
+            "content_security_policy":"script-src 'self' https://apis.google.com 'unsafe-eval'; object-src 'self'",
+            "oauth2": {
+                "client_id": "816806001599-tav3je4l3mig3hvr7jhluoo9a4t94bb9.apps.googleusercontent.com",
+                "scopes": [
+                    "https://www.googleapis.com/auth/calendar.modify"
+                ]
+            }
 
 }

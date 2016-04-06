@@ -1,6 +1,7 @@
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
-var CLIENT_ID = '816806001599-570v0vdbknp1u364n6b1a1goni7mlt91.apps.googleusercontent.com'; // client ID
+var CLIENT_ID = '816806001599-tav3je4l3mig3hvr7jhluoo9a4t94bb9.apps.googleusercontent.com';
+var apiKey = 'AIzaSyCUXN9HPOCAQPuMZWFxOIx5lHJh8wZavas';
 
 var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 
@@ -32,6 +33,11 @@ function handleAuthResult(authResult) {
         // clicking authorize button.
         authorizeDiv.style.display = 'inline';
     }
+}
+
+function handleClientLoad() {
+      gapi.client.setApiKey(apiKey);
+      window.setTimeout(checkAuth,1);
 }
 
 /**
